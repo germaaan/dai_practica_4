@@ -43,7 +43,7 @@ urls = (
 	'/maps_Twitter', 'maps_twitter'
 )
 
-app = web.application(urls, locals())
+app = web.application(urls, globals())
 
 sesion = web.session.Session(app, web.session.DiskStore('sessions'), initializer={'usuario':'','link1':'','link2':'','link3':'','tuit':'','numero':''})
 
